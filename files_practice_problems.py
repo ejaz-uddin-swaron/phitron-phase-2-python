@@ -44,3 +44,33 @@ try:
 except Exception as e:
   print(e)
 
+
+
+
+
+
+
+"""
+
+Problem 5: Write and Read a File
+Problem:
+ Write a Python program to:
+Create a text file named data.txt
+
+
+Write “Learning Python is fun!” into it.
+
+
+Read the file and print its content.
+
+"""
+
+try:  
+  with open("./sample_data/data.txt","w+") as file:
+    file.write("Learning Python is fun!")
+    # print(file.tell())
+    file.seek(0)
+    content = file.read()
+    print(content)
+except Exception as e:
+  print(e)
