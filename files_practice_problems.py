@@ -1,3 +1,6 @@
+# Colab  link:
+# https://colab.research.google.com/drive/1Yks98_pyZCJH5OGTAZ0KfgNRwe5--VBv#scrollTo=yGF2GB7Xuz4a
+
 """
 1. Create a text file named emails.txt containing multiple email addresses, some in uppercase and some repeated.
 Write a Python program to clean the data by converting all emails to lowercase, removing duplicates, sorting them alphabetically, and saving the cleaned list to a new file named unique_emails.txt.
@@ -53,7 +56,6 @@ except Exception as e:
 """
 
 Problem 5: Write and Read a File
-Problem:
  Write a Python program to:
 Create a text file named data.txt
 
@@ -74,3 +76,26 @@ try:
     print(content)
 except Exception as e:
   print(e)
+
+"""
+ Problem 6: Count Lines in a File
+ Write a Python program to count how many lines are in a text file named story.txt.
+ If the file does not exist, handle the exception and print an error message, otherwise read the text file ( test it with both conditions ). Print a message finally. 
+
+ """
+
+try:
+  with open("./sample_data/story.txt","w") as file:
+    file.write("Once upon a time...")
+
+except Exception as e:
+  print(e)
+
+else:
+  with open("./sample_data/story.txt","r") as file:
+    content = file.read()
+    print(content)
+    
+finally:
+  print("OK, I had enough today with python!")
+
